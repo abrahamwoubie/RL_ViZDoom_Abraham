@@ -191,6 +191,10 @@ class Agent(object):
 
         if (self.memory.size > 2*parameter.replay_memory_batch_size):
             s1, s3, a, s2, s4,isterminal, r = self.memory.Get(parameter.replay_memory_batch_size)
+            # s1 is the current state using pixel information
+            # s3 is the current state using audio information
+            # s2 is the next state using pixel information
+            # s4 is the next state using audio information
             q = self.model.GetQ(s1,s3)
             q2 = np.max(self.model.GetQ(s2,s4), axis=1)
             q[np.arange(q.shape[0]), a] = r + (1 - isterminal) * parameter.Discount_Factor * q2
