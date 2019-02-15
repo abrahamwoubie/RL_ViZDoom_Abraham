@@ -272,9 +272,10 @@ def Test_Model(agent):
                 #episode_list.append(test)
                 reward_total = 0
                 test=test+1
-            state_raw = env.Observation()
-            state = Preprocess(state_raw)
-            best_action=agent.GetAction(state)
+
+            state_raw_pixel,state_raw_audio = env.Observation()
+            state_pixel,state_audio = Preprocess(state_raw_pixel,state_raw_audio)
+            best_action=agent.GetAction(state_pixel,state_audio)
 
             for _ in range(parameter.frame_repeat):
 
