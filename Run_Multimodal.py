@@ -87,11 +87,11 @@ def Display_Training(iteration, how_many_times, train_scores):
 class ReplayMemory(object):
     def __init__(self, capacity):
 
-        self.s1 = np.zeros((capacity,) + resolution, dtype=np.float64)
-        self.s2 = np.zeros((capacity,) + resolution, dtype=np.float64)
+        self.s1 = np.zeros((capacity,) + resolution, dtype=np.float64)#current state pixel
+        self.s2 = np.zeros((capacity,) + resolution, dtype=np.float64)#next state pixel
 
-        self.s3 = np.zeros((capacity,) + resolution_samples, dtype=np.float64)
-        self.s4 = np.zeros((capacity,) + resolution_samples, dtype=np.float64)
+        self.s3 = np.zeros((capacity,) + resolution_samples, dtype=np.float64) #current state audio
+        self.s4 = np.zeros((capacity,) + resolution_samples, dtype=np.float64) #next state audio
 
         self.a = np.zeros(capacity, dtype=np.int32)
         self.r = np.zeros(capacity, dtype=np.float32)
