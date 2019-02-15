@@ -21,9 +21,6 @@ import skimage.color, skimage.transform
 from vizdoom import *
 np.set_printoptions(threshold=np.inf)
 
-
-from ExtractFeatures import Extract_Features
-
 from pydub import AudioSegment
 from playsound import playsound
 
@@ -35,7 +32,6 @@ from GlobalVariables import GlobalVariables
 mean_scores=[]
 parameter=GlobalVariables
 
-Extract=Extract_Features
 np.set_printoptions(threshold=np.inf)
 #mean_scores=[]
 
@@ -49,7 +45,7 @@ Load_Model = False
 Train_Model = True
 
 Working_Directory = "./"
-scenario_file = Working_Directory + "../RL_ViZDoom/Scenarios/find.wad"
+scenario_file = Working_Directory + "find.wad"
 
 from Environment import Environment
 
