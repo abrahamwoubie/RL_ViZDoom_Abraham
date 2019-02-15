@@ -127,8 +127,8 @@ class Model(object):
         print('Training Using',Feature)
 
         # Create the input.
-        self.s1_pixel = tf.placeholder(shape=[None] + list(resolution), dtype=tf.float64)
-        self.s3_audio=tf.placeholder(shape=[None]+ list(resolution_samples),dtype=tf.float64)
+        self.s1_pixel = tf.placeholder(shape=[None] + list(resolution), dtype=tf.float64) #current state pixel
+        self.s3_audio=tf.placeholder(shape=[None]+ list(resolution_samples),dtype=tf.float64) #current state audio
         self.q_ = tf.placeholder(shape=[None, actions_count], dtype=tf.float32)
 
         # Create the network for the pixels.
