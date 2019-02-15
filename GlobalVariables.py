@@ -1,11 +1,5 @@
 class GlobalVariables :
 
-    #options for running different experiments
-    use_MFCC = 0
-    use_Pixels=0
-    use_samples=1
-    use_spectrogram=0
-
     #parameters
     how_many_times_training=1
     how_many_times = 1000000

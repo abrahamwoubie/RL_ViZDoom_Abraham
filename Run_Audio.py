@@ -48,22 +48,8 @@ scenario_file = Working_Directory + "find.wad"
 
 from Environment import Environment
 
-
-if(parameter.use_MFCC):
-    resolution = (455, 13) + (parameter.channels_audio,)
-    Feature='MFCC'
-
-if(parameter.use_Pixels):
-    resolution = (30, 45) + (parameter.channels,)
-    Feature='Pixels'
-
-if(parameter.use_spectrogram):
-    resolution = (30, 45) + (parameter.channels_audio,)
-    Feature='Spectrogram'
-
-if(parameter.use_samples):
-    resolution = (1,100) + (parameter.channels_audio,)
-    Feature='Samples'
+resolution = (1,100) + (parameter.channels_audio,)
+Feature='Samples'
 
 model_path = Working_Directory + "/Trained_Model_Paper/"+Feature+'_'+str(parameter.how_many_times)+"/"
 

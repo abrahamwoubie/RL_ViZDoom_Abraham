@@ -7,13 +7,11 @@ from vizdoom import *
 from pydub import AudioSegment
 from pydub.playback import play
 from ExtractFeatures import Extract_Features
-from GlobalVariables import GlobalVariables
 
 import scipy
 target_position_x = 100
 target_position_y = 100
 
-parameter=GlobalVariables
 Extract=Extract_Features
 
 class Environment(object):
@@ -74,24 +72,7 @@ class Environment(object):
         s = self.game.get_state()
         player_position_x = s.game_variables[0]
         player_position_y = s.game_variables[1]
-        if (parameter.use_MFCC):
-            return (Extract.Extract_MFCC(self, player_position_x, player_position_y))
-        if (parameter.use_spectrogram):
-            return (Extract.Extract_Spectrogram(self, player_position_x, player_position_y))
-        if (parameter.use_samples):
-            return (Extract.Extract_Samples(self, player_position_x, player_position_y))
-        if (parameter.use_Pixels):
-            pixel_data = (self.game.get_state().screen_buffer)
-            return pixel_data[:, :, 1]
-    ''' 
-    def Observation(self):
-        s = self.game.get_state()
-        player_position_x=s.game_variables[0]
-        player_position_y=s.game_variables[1]
-        samples= Extract.Extract_Samples(self,player_position_x,player_position_y)
-        pixel_data=(self.game.get_state().screen_buffer)
-        pixel_data=pixel_data[:,:,1]
-        return pixel_data,samples
-    '''
+        return (Extract.Extract_Samples(self, player_position_x, player_position_y))
+
     def MapActions(self, action_raw):
         return action_raw
