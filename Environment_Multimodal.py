@@ -7,13 +7,11 @@ from vizdoom import *
 from pydub import AudioSegment
 from pydub.playback import play
 from ExtractFeatures import Extract_Features
-from GlobalVariables import GlobalVariables
 
 import scipy
 target_position_x = 100
 target_position_y = 100
 
-parameter=GlobalVariables
 Extract=Extract_Features
 
 class Environment_Multimodal(object):
