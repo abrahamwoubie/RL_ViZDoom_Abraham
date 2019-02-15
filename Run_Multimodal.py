@@ -163,7 +163,7 @@ class Model(object):
     def GetAction(self, state_pixel,state_audio):
 
         state_pixel = state_pixel.reshape([1] + list(resolution))#(1, 30, 45, 3)
-        state_audio = state_audio.reshape([1] + list(resolution_samples))  # (1, 30, 45, 3)
+        state_audio = state_audio.reshape([1] + list(resolution_samples))  # (1, 1, 100, 1)
         return self.session.run(self.action, feed_dict={self.s1_pixel: state_pixel,self.s3_audio:state_audio})[0]
 
 class Agent(object):
