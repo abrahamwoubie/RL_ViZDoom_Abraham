@@ -22,7 +22,7 @@ class Extract_Features:
 
         distance=scipy.spatial.distance.euclidean(player, target)
 
-        self.sample_rate, self.data = scipy.io.wavfile.read('../RL_ViZDoom/Audios/Hello.wav')
+        self.sample_rate, self.data = scipy.io.wavfile.read('Hello.wav')
         # Spectrogram of .wav file
         self.sample_freq, self.segment_time, self.spec_data = signal.spectrogram(self.data, self.sample_rate)
 
@@ -43,7 +43,7 @@ class Extract_Features:
         n_filters = 40  # must be 40 for mfcc
         n_coeffs = 13
 
-        source_filename = '../RL_ViZDoom/Scenarios/Hello.wav'
+        source_filename = 'Hello.wav'
         samplerate = 44100
         win_s = 512
         hop_s = 128
@@ -78,7 +78,7 @@ class Extract_Features:
             factor = 1
         else:
             factor = 1 / distance
-        sound = AudioSegment.from_mp3("../RL_ViZDoom/Audios/Hello.wav")
+        sound = AudioSegment.from_mp3("Hello.wav")
 
         # get raw audio data as a bytestring
         raw_data = sound.raw_data
