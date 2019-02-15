@@ -22,7 +22,7 @@ from vizdoom import *
 np.set_printoptions(threshold=np.inf)
 
 
-from ExtractFeatures import Extract_Features
+#from ExtractFeatures import Extract_Features
 
 from pydub import AudioSegment
 from playsound import playsound
@@ -35,7 +35,7 @@ from GlobalVariables_Multimodal import GlobalVariables_Multimodal
 mean_scores=[]
 parameter=GlobalVariables_Multimodal
 
-Extract=Extract_Features
+#Extract=Extract_Features
 np.set_printoptions(threshold=np.inf)
 #mean_scores=[]
 
