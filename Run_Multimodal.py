@@ -200,10 +200,10 @@ class Agent(object):
     def GetAction(self, state,state_audio):
 
         if (random.random() <= 0.05):
-            a = random.randint(0, self.num_actions-1)
+            best_action = random.randint(0, self.num_actions-1)
         else:
-            a = self.model.GetAction(state,state_audio)
-        return a
+            best_action = self.model.GetAction(state,state_audio)
+        return best_action
 
     def perform_learning_step(self, iteration):
 

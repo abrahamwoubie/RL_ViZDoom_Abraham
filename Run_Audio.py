@@ -123,10 +123,6 @@ class ReplayMemory(object):
     def Get(self, sample_size):
 
         i = random.sample(range(0, self.size-2), sample_size)
-        #idx2 = []
-        #for i in idx:
-            #idx2.append(i + 1)
-        #return self.s[idx], self.a[idx], self.s[idx2], self.isterminal[idx], self.r[idx]
         return self.s1[i], self.a[i], self.s2[i], self.isterminal[i], self.r[i]
 
 class Model(object):
@@ -165,7 +161,7 @@ class Model(object):
     def GetAction(self, state):
 
         state = state.astype(np.float32) #(30,45,3)
-        state = state.reshape([1] + list(resolution))#(1, 30, 45, 3)
+        state = state.reshape([1] + list(resolution))#(1, 1, 100, 1)
         return self.session.run(self.action, feed_dict={self.s1_: state})[0]
 
 class Agent(object):
@@ -206,10 +202,10 @@ class Agent(object):
     def GetAction(self, state):
 
         if (random.random() <= 0.05):
-            a = random.randint(0, self.num_actions-1)
+            best_action = random.randint(0, self.num_actions-1)
         else:
-            a = self.model.GetAction(state)
-        return a
+            best_action = self.model.GetAction(state)
+        return best_action
 
     def perform_learning_step(self, iteration):
 
