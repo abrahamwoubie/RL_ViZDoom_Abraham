@@ -133,7 +133,7 @@ class Model(object):
 
         # Create the input.
         self.s1_pixel = tf.placeholder(shape=[None] + list(resolution), dtype=tf.float64)
-        self.s1_audio=tf.placeholder(shape=[None]+ list(resolution_samples),dtype=tf.float64)
+        self.s3_audio=tf.placeholder(shape=[None]+ list(resolution_samples),dtype=tf.float64)
         self.q_ = tf.placeholder(shape=[None, actions_count], dtype=tf.float32)
 
         # Create the network for the pixels.
@@ -142,7 +142,7 @@ class Model(object):
         conv2_flat = tf.contrib.layers.flatten(conv2)
 
         # Create the network for the images.
-        conv1_audio = tf.contrib.layers.conv2d(self.s1_audio, num_outputs=16, kernel_size=[3, 3], stride=[2, 2])
+        conv1_audio = tf.contrib.layers.conv2d(self.s3_audio, num_outputs=16, kernel_size=[3, 3], stride=[2, 2])
         conv2_audio = tf.contrib.layers.conv2d(conv1_audio, num_outputs=32, kernel_size=[3, 3], stride=[2, 2])
         conv2_flat_audio = tf.contrib.layers.flatten(conv2_audio)
 
@@ -158,18 +158,18 @@ class Model(object):
 
     def Learn(self, state_pixel, state_audio, q):
 
-        l, _ = self.session.run([self.loss, self.train_step], feed_dict={self.s1_pixel : state_pixel, self.s1_audio:state_audio, self.q_: q})
+        l, _ = self.session.run([self.loss, self.train_step], feed_dict={self.s1_pixel : state_pixel, self.s3_audio:state_audio, self.q_: q})
         return l
 
     def GetQ(self, state_pixel,state_audio):
 
-        return self.session.run(self.q, feed_dict={self.s1_pixel : state_pixel,self.s1_audio:state_audio})
+        return self.session.run(self.q, feed_dict={self.s1_pixel : state_pixel,self.s3_audio:state_audio})
 
     def GetAction(self, state_pixel,state_audio):
 
         state_pixel = state_pixel.reshape([1] + list(resolution))#(1, 30, 45, 3)
         state_audio = state_audio.reshape([1] + list(resolution_samples))  # (1, 30, 45, 3)
-        return self.session.run(self.action, feed_dict={self.s1_pixel: state_pixel,self.s1_audio:state_audio})[0]
+        return self.session.run(self.action, feed_dict={self.s1_pixel: state_pixel,self.s3_audio:state_audio})[0]
 
 class Agent(object):
     def __init__(self, num_actions):
