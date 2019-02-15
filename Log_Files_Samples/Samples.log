@@ -1,0 +1,119 @@
+Initializing the doom.
+Doom is initialized.
+2019-02-15 13:04:41.252083: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce RTX 2080 Ti major: 7 minor: 5 memoryClockRate(GHz): 1.545
+pciBusID: 0000:04:00.0
+totalMemory: 10.73GiB freeMemory: 9.94GiB
+2019-02-15 13:04:41.252127: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-02-15 13:04:41.708653: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-02-15 13:04:41.708705: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-02-15 13:04:41.708713: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-02-15 13:04:41.709031: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 9591 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2080 Ti, pci bus id: 0000:04:00.0, compute capability: 7.5)
+Training Using Samples
+Training Iteration 1, using Samples
+/usr/local/lib/python3.5/dist-packages/skimage/transform/_warps.py:105: UserWarning: The default mode, 'constant', will be changed to 'reflect' in skimage 0.15.
+  warn("The default mode, 'constant', will be changed to 'reflect' in "
+/usr/local/lib/python3.5/dist-packages/skimage/transform/_warps.py:110: UserWarning: Anti-aliasing will be enabled by default in skimage 0.15 to avoid aliasing artifacts when down-sampling images.
+  warn("Anti-aliasing will be enabled by default in skimage 0.15 to "
+Steps: 2000/1000000 Episodes: 18 Rewards: mean: 0.89, std: 0.31, min: 0.00, max: 1.00
+Steps: 4000/1000000 Episodes: 12 Rewards: mean: 0.42, std: 0.49, min: 0.00, max: 1.00
+Steps: 6000/1000000 Episodes: 14 Rewards: mean: 0.50, std: 0.50, min: 0.00, max: 1.00
+Steps: 8000/1000000 Episodes: 14 Rewards: mean: 0.57, std: 0.49, min: 0.00, max: 1.00
+Steps: 10000/1000000 Episodes: 14 Rewards: mean: 0.57, std: 0.49, min: 0.00, max: 1.00
+Steps: 12000/1000000 Episodes: 20 Rewards: mean: 0.80, std: 0.40, min: 0.00, max: 1.00
+Steps: 14000/1000000 Episodes: 14 Rewards: mean: 0.57, std: 0.49, min: 0.00, max: 1.00
+Steps: 16000/1000000 Episodes: 15 Rewards: mean: 0.53, std: 0.50, min: 0.00, max: 1.00
+Steps: 18000/1000000 Episodes: 16 Rewards: mean: 0.56, std: 0.50, min: 0.00, max: 1.00
+Steps: 20000/1000000 Episodes: 11 Rewards: mean: 0.18, std: 0.39, min: 0.00, max: 1.00
+Steps: 22000/1000000 Episodes: 17 Rewards: mean: 0.59, std: 0.49, min: 0.00, max: 1.00
+Steps: 24000/1000000 Episodes: 14 Rewards: mean: 0.43, std: 0.49, min: 0.00, max: 1.00
+Steps: 26000/1000000 Episodes: 15 Rewards: mean: 0.60, std: 0.49, min: 0.00, max: 1.00
+Steps: 28000/1000000 Episodes: 17 Rewards: mean: 0.71, std: 0.46, min: 0.00, max: 1.00
+Steps: 30000/1000000 Episodes: 13 Rewards: mean: 0.69, std: 0.46, min: 0.00, max: 1.00
+Steps: 32000/1000000 Episodes: 17 Rewards: mean: 0.82, std: 0.38, min: 0.00, max: 1.00
+Steps: 34000/1000000 Episodes: 13 Rewards: mean: 0.31, std: 0.46, min: 0.00, max: 1.00
+Steps: 36000/1000000 Episodes: 19 Rewards: mean: 0.79, std: 0.41, min: 0.00, max: 1.00
+Steps: 38000/1000000 Episodes: 11 Rewards: mean: 0.27, std: 0.45, min: 0.00, max: 1.00
+Steps: 40000/1000000 Episodes: 15 Rewards: mean: 0.60, std: 0.49, min: 0.00, max: 1.00
+Steps: 42000/1000000 Episodes: 16 Rewards: mean: 0.50, std: 0.50, min: 0.00, max: 1.00
+Steps: 44000/1000000 Episodes: 18 Rewards: mean: 0.72, std: 0.45, min: 0.00, max: 1.00
+Steps: 46000/1000000 Episodes: 18 Rewards: mean: 0.78, std: 0.42, min: 0.00, max: 1.00
+Steps: 48000/1000000 Episodes: 14 Rewards: mean: 0.64, std: 0.48, min: 0.00, max: 1.00
+Steps: 50000/1000000 Episodes: 14 Rewards: mean: 0.50, std: 0.50, min: 0.00, max: 1.00
+Steps: 52000/1000000 Episodes: 12 Rewards: mean: 0.33, std: 0.47, min: 0.00, max: 1.00
+Steps: 54000/1000000 Episodes: 18 Rewards: mean: 0.67, std: 0.47, min: 0.00, max: 1.00
+Steps: 56000/1000000 Episodes: 16 Rewards: mean: 0.62, std: 0.48, min: 0.00, max: 1.00
+Steps: 58000/1000000 Episodes: 15 Rewards: mean: 0.60, std: 0.49, min: 0.00, max: 1.00
+Steps: 60000/1000000 Episodes: 13 Rewards: mean: 0.62, std: 0.49, min: 0.00, max: 1.00
+Steps: 62000/1000000 Episodes: 13 Rewards: mean: 0.46, std: 0.50, min: 0.00, max: 1.00
+Steps: 64000/1000000 Episodes: 20 Rewards: mean: 0.80, std: 0.40, min: 0.00, max: 1.00
+Steps: 66000/1000000 Episodes: 12 Rewards: mean: 0.33, std: 0.47, min: 0.00, max: 1.00
+Steps: 68000/1000000 Episodes: 17 Rewards: mean: 0.65, std: 0.48, min: 0.00, max: 1.00
+Steps: 70000/1000000 Episodes: 13 Rewards: mean: 0.54, std: 0.50, min: 0.00, max: 1.00
+Steps: 72000/1000000 Episodes: 15 Rewards: mean: 0.73, std: 0.44, min: 0.00, max: 1.00
+Steps: 74000/1000000 Episodes: 14 Rewards: mean: 0.64, std: 0.48, min: 0.00, max: 1.00
+Steps: 76000/1000000 Episodes: 13 Rewards: mean: 0.54, std: 0.50, min: 0.00, max: 1.00
+Steps: 78000/1000000 Episodes: 15 Rewards: mean: 0.53, std: 0.50, min: 0.00, max: 1.00
+Steps: 80000/1000000 Episodes: 13 Rewards: mean: 0.38, std: 0.49, min: 0.00, max: 1.00
+Steps: 82000/1000000 Episodes: 12 Rewards: mean: 0.50, std: 0.50, min: 0.00, max: 1.00
+Steps: 84000/1000000 Episodes: 15 Rewards: mean: 0.53, std: 0.50, min: 0.00, max: 1.00
+Steps: 86000/1000000 Episodes: 15 Rewards: mean: 0.53, std: 0.50, min: 0.00, max: 1.00
+Steps: 88000/1000000 Episodes: 17 Rewards: mean: 0.59, std: 0.49, min: 0.00, max: 1.00
+Steps: 90000/1000000 Episodes: 16 Rewards: mean: 0.69, std: 0.46, min: 0.00, max: 1.00
+Steps: 92000/1000000 Episodes: 14 Rewards: mean: 0.57, std: 0.49, min: 0.00, max: 1.00
+Steps: 94000/1000000 Episodes: 17 Rewards: mean: 0.76, std: 0.42, min: 0.00, max: 1.00
+Steps: 96000/1000000 Episodes: 14 Rewards: mean: 0.43, std: 0.49, min: 0.00, max: 1.00
+Steps: 98000/1000000 Episodes: 17 Rewards: mean: 0.76, std: 0.42, min: 0.00, max: 1.00
+Steps: 100000/1000000 Episodes: 18 Rewards: mean: 0.83, std: 0.37, min: 0.00, max: 1.00
+Steps: 102000/1000000 Episodes: 16 Rewards: mean: 0.75, std: 0.43, min: 0.00, max: 1.00
+Steps: 104000/1000000 Episodes: 13 Rewards: mean: 0.54, std: 0.50, min: 0.00, max: 1.00
+Steps: 106000/1000000 Episodes: 13 Rewards: mean: 0.38, std: 0.49, min: 0.00, max: 1.00
+Steps: 108000/1000000 Episodes: 19 Rewards: mean: 0.74, std: 0.44, min: 0.00, max: 1.00
+Steps: 110000/1000000 Episodes: 18 Rewards: mean: 0.78, std: 0.42, min: 0.00, max: 1.00
+Steps: 112000/1000000 Episodes: 18 Rewards: mean: 0.67, std: 0.47, min: 0.00, max: 1.00
+Steps: 114000/1000000 Episodes: 16 Rewards: mean: 0.69, std: 0.46, min: 0.00, max: 1.00
+Steps: 116000/1000000 Episodes: 22 Rewards: mean: 0.77, std: 0.42, min: 0.00, max: 1.00
+Steps: 118000/1000000 Episodes: 16 Rewards: mean: 0.81, std: 0.39, min: 0.00, max: 1.00
+Steps: 120000/1000000 Episodes: 24 Rewards: mean: 0.83, std: 0.37, min: 0.00, max: 1.00
+Steps: 122000/1000000 Episodes: 20 Rewards: mean: 0.80, std: 0.40, min: 0.00, max: 1.00
+Steps: 124000/1000000 Episodes: 15 Rewards: mean: 0.67, std: 0.47, min: 0.00, max: 1.00
+Steps: 126000/1000000 Episodes: 15 Rewards: mean: 0.60, std: 0.49, min: 0.00, max: 1.00
+Steps: 128000/1000000 Episodes: 21 Rewards: mean: 0.76, std: 0.43, min: 0.00, max: 1.00
+Steps: 130000/1000000 Episodes: 17 Rewards: mean: 0.76, std: 0.42, min: 0.00, max: 1.00
+Steps: 132000/1000000 Episodes: 22 Rewards: mean: 0.82, std: 0.39, min: 0.00, max: 1.00
+Steps: 134000/1000000 Episodes: 18 Rewards: mean: 0.78, std: 0.42, min: 0.00, max: 1.00
+Steps: 136000/1000000 Episodes: 25 Rewards: mean: 0.84, std: 0.37, min: 0.00, max: 1.00
+Steps: 138000/1000000 Episodes: 19 Rewards: mean: 0.68, std: 0.46, min: 0.00, max: 1.00
+Steps: 140000/1000000 Episodes: 16 Rewards: mean: 0.62, std: 0.48, min: 0.00, max: 1.00
+Steps: 142000/1000000 Episodes: 18 Rewards: mean: 0.67, std: 0.47, min: 0.00, max: 1.00
+Steps: 144000/1000000 Episodes: 16 Rewards: mean: 0.69, std: 0.46, min: 0.00, max: 1.00
+Steps: 146000/1000000 Episodes: 16 Rewards: mean: 0.62, std: 0.48, min: 0.00, max: 1.00
+Steps: 148000/1000000 Episodes: 14 Rewards: mean: 0.71, std: 0.45, min: 0.00, max: 1.00
+Steps: 150000/1000000 Episodes: 18 Rewards: mean: 0.78, std: 0.42, min: 0.00, max: 1.00
+Steps: 152000/1000000 Episodes: 26 Rewards: mean: 0.88, std: 0.32, min: 0.00, max: 1.00
+Steps: 154000/1000000 Episodes: 15 Rewards: mean: 0.60, std: 0.49, min: 0.00, max: 1.00
+Steps: 156000/1000000 Episodes: 21 Rewards: mean: 0.86, std: 0.35, min: 0.00, max: 1.00
+Steps: 158000/1000000 Episodes: 15 Rewards: mean: 0.60, std: 0.49, min: 0.00, max: 1.00
+Steps: 160000/1000000 Episodes: 17 Rewards: mean: 0.65, std: 0.48, min: 0.00, max: 1.00
+Steps: 162000/1000000 Episodes: 23 Rewards: mean: 0.87, std: 0.34, min: 0.00, max: 1.00
+Steps: 164000/1000000 Episodes: 21 Rewards: mean: 0.95, std: 0.21, min: 0.00, max: 1.00
+Steps: 166000/1000000 Episodes: 17 Rewards: mean: 0.71, std: 0.46, min: 0.00, max: 1.00
+Steps: 168000/1000000 Episodes: 14 Rewards: mean: 0.50, std: 0.50, min: 0.00, max: 1.00
+Steps: 170000/1000000 Episodes: 22 Rewards: mean: 0.77, std: 0.42, min: 0.00, max: 1.00
+Steps: 172000/1000000 Episodes: 21 Rewards: mean: 0.81, std: 0.39, min: 0.00, max: 1.00
+Steps: 174000/1000000 Episodes: 16 Rewards: mean: 0.75, std: 0.43, min: 0.00, max: 1.00
+Steps: 176000/1000000 Episodes: 14 Rewards: mean: 0.57, std: 0.49, min: 0.00, max: 1.00
+Steps: 178000/1000000 Episodes: 19 Rewards: mean: 0.74, std: 0.44, min: 0.00, max: 1.00
+Steps: 180000/1000000 Episodes: 13 Rewards: mean: 0.46, std: 0.50, min: 0.00, max: 1.00
+Steps: 182000/1000000 Episodes: 21 Rewards: mean: 0.67, std: 0.47, min: 0.00, max: 1.00
+Steps: 184000/1000000 Episodes: 17 Rewards: mean: 0.82, std: 0.38, min: 0.00, max: 1.00
+Traceback (most recent call last):
+  File "Run_Audio.py", line 324, in <module>
+    agent.Train()
+  File "Run_Audio.py", line 245, in Train
+    self.perform_learning_step(iteration)
+  File "Run_Audio.py", line 227, in perform_learning_step
+    self.reward = env.Make_Action(best_action, parameter.frame_repeat)
+  File "/home/woubie/RL_Audio/Environment.py", line 68, in Make_Action
+    return self.game.make_action(self.actions[action], frame_repeat)
+vizdoom.vizdoom.SignalException: Signal SIGTERM received. ViZDoom instance has been closed.
