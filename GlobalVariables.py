@@ -2,14 +2,14 @@ class GlobalVariables :
 
     #parameters
     how_many_times_training=1
-    how_many_times = 1000000
+    how_many_times = 600000
     replay_memory_size = 100000
     replay_memory_batch_size = 64
 
     Learning_Rate = 0.00025
     Discount_Factor = 0.99
 
-    frame_repeat = 10
+    frame_repeat = 4
     channels = 1
 
     channels_audio = 1

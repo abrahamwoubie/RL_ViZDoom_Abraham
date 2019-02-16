@@ -51,16 +51,18 @@ from Environment import Environment
 resolution = (1,100) + (parameter.channels_audio,)
 Feature='Samples'
 
-model_path = Working_Directory + "/Trained_Model_Paper/"+Feature+'_'+str(parameter.how_many_times)+"/"
+#model_path = Working_Directory + "/Trained_Model_Paper/"+Feature+'_'+str(parameter.how_many_times)+"/"
+model_path= Working_Directory+'Model_'+Feature+ '_'+ str(parameter.how_many_times) + '_Framerepeat_'+str(parameter.frame_repeat)
 
 MakeDir(model_path)
-model_name = model_path + "model"
+DEFAULT_MODEL_SAVEFILE = model_path + '/model'
+#model_name = model_path + "model"
 #
 def Preprocess(img):
      #img = img[0].astype(np.float32) / 255.0
-     #img = skimage.transform.resize(img, resolution)
+     img = skimage.transform.resize(img, resolution)
      #img = img.astype(np.float32)
-     img = img.reshape([1] + list(resolution))
+     #img = img.reshape([1] + list(resolution))
      return img
 
 def Display_Training(iteration, how_many_times, train_scores):
@@ -163,11 +165,14 @@ class Agent(object):
         self.memory = ReplayMemory(parameter.replay_memory_size)
         #self.rewards = 0
 
-        self.saver = tf.train.Saver(max_to_keep=1000)
+        #self.saver = tf.train.Saver(max_to_keep=1000)
+        self.saver = tf.train.Saver()
         if (Load_Model):
-            model_name_curr = model_name #+ "_{:04}".format(step_load)
-            print("Loading model from: ", model_name_curr)
-            self.saver.restore(self.session, model_name_curr)
+            print("Loading model from: ", DEFAULT_MODEL_SAVEFILE)
+            self.saver.restore(self.session, DEFAULT_MODEL_SAVEFILE)
+            #model_name_curr = model_name #+ "_{:04}".format(step_load)
+            #print("Loading model from: ", model_name_curr)
+            #self.saver.restore(self.session, model_name_curr)
         else:
             init = tf.global_variables_initializer()
             self.session.run(init)
@@ -221,9 +226,10 @@ class Agent(object):
                 train_scores.append(self.reward)
                 env.Reset()
             if (iteration % parameter.save_each == 0):
-                model_name_curr = model_name #+ "_{:04}".format(int(iteration / save_each))
-                self.saver.save(self.session, model_name_curr)
-                Display_Training(iteration,parameter.how_many_times, train_scores)
+                #model_name_curr = model_name #+ "_{:04}".format(int(iteration / save_each))
+                #self.saver.save(self.session, model_name_curr)
+                self.saver.save(self.session, DEFAULT_MODEL_SAVEFILE)
+                Display_Training(iteration, parameter.how_many_times, train_scores)
                 train_scores = []
         env.Reset()
 def Test_Model(agent):
