@@ -54,16 +54,22 @@ resolution = (30, 45) + (parameter.channels,)
 resolution_samples = (1,100) + (parameter.channels_audio,)
 Feature='Multimodal'
 
-model_path = Working_Directory + "/Trained_Model_Paper/"+Feature+'_'+str(parameter.how_many_times)+"/"
+# model_path = Working_Directory + "/Trained_Model_Paper/"+Feature+'_'+str(parameter.how_many_times)+"/"
+#
+# MakeDir(model_path)
+# model_name = model_path + "model"
+#
+
+model_path= Working_Directory+'Model_'+Feature+ '_'+ str(parameter.how_many_times) + '_Framerepeat_'+str(parameter.frame_repeat)
 
 MakeDir(model_path)
-model_name = model_path + "model"
-#
+DEFAULT_MODEL_SAVEFILE = model_path + '/model'
 def Preprocess(img_pixel,img_audio):
      img_pixel = img_pixel[0].astype(np.float64) / 255.0
      img_pixel = skimage.transform.resize(img_pixel, resolution)
 
-     img_audio = img_audio.reshape([1] + list(resolution_samples))
+     img_audio = skimage.transform.resize(img_audio, resolution_samples)
+     #img_audio = img_audio.reshape([1] + list(resolution_samples))
 
      return img_pixel, img_audio
 
@@ -176,11 +182,14 @@ class Agent(object):
         self.model = Model(self.session, num_actions)
         self.memory = ReplayMemory(parameter.replay_memory_size)
 
-        self.saver = tf.train.Saver(max_to_keep=1000)
+        #self.saver = tf.train.Saver(max_to_keep=1000)
+        self.saver = tf.train.Saver()
         if (Load_Model):
-            model_name_curr = model_name #+ "_{:04}".format(step_load)
-            print("Loading model from: ", model_name_curr)
-            self.saver.restore(self.session, model_name_curr)
+            print("Loading model from: ", DEFAULT_MODEL_SAVEFILE)
+            self.saver.restore(self.session, DEFAULT_MODEL_SAVEFILE)
+            #model_name_curr = model_name #+ "_{:04}".format(step_load)
+            #print("Loading model from: ", model_name_curr)
+            #self.saver.restore(self.session, model_name_curr)
         else:
             init = tf.global_variables_initializer()
             self.session.run(init)
@@ -244,8 +253,9 @@ class Agent(object):
                 train_scores.append(self.reward)
                 env.Reset()
             if (iteration % parameter.save_each == 0):
-                model_name_curr = model_name #+ "_{:04}".format(int(iteration / save_each))
-                self.saver.save(self.session, model_name_curr)
+                #model_name_curr = model_name #+ "_{:04}".format(int(iteration / save_each))
+                #self.saver.save(self.session, model_name_curr)
+                self.saver.save(self.session, DEFAULT_MODEL_SAVEFILE)
                 Display_Training(iteration,parameter.how_many_times, train_scores)
                 train_scores = []
         env.Reset()
