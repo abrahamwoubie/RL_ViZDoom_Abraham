@@ -1,7 +1,7 @@
 class GlobalVariables_Image:
 
     #parameters
-    how_many_times_training=2
+    how_many_times_training=1
     how_many_times = 600000
     replay_memory_size = 100000
     replay_memory_batch_size = 64

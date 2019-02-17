@@ -1,0 +1,316 @@
+Initializing the doom.
+Gtk-Message: 11:39:21.521: Failed to load module "canberra-gtk-module"
+Doom is initialized.
+2019-02-17 11:39:21.686938: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-02-17 11:39:21.760192: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:898] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-02-17 11:39:21.760784: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Quadro P1000 major: 6 minor: 1 memoryClockRate(GHz): 1.5185
+pciBusID: 0000:01:00.0
+totalMemory: 3.94GiB freeMemory: 2.80GiB
+2019-02-17 11:39:21.760803: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0
+2019-02-17 11:39:21.936915: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-02-17 11:39:21.936950: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 
+2019-02-17 11:39:21.936956: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N 
+2019-02-17 11:39:21.937081: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2509 MB memory) -> physical GPU (device: 0, name: Quadro P1000, pci bus id: 0000:01:00.0, compute capability: 6.1)
+Training Using Samples
+Training Iteration 1, using Samples
+/home/woubie/.local/lib/python3.6/site-packages/skimage/transform/_warps.py:105: UserWarning: The default mode, 'constant', will be changed to 'reflect' in skimage 0.15.
+  warn("The default mode, 'constant', will be changed to 'reflect' in "
+/home/woubie/.local/lib/python3.6/site-packages/skimage/transform/_warps.py:110: UserWarning: Anti-aliasing will be enabled by default in skimage 0.15 to avoid aliasing artifacts when down-sampling images.
+  warn("Anti-aliasing will be enabled by default in skimage 0.15 to "
+Steps: 4000/1000000 Episodes: 7 Rewards: mean: 0.14, std: 0.35, min: 0.00, max: 1.00
+Steps: 8000/1000000 Episodes: 10 Rewards: mean: 0.30, std: 0.46, min: 0.00, max: 1.00
+Steps: 12000/1000000 Episodes: 9 Rewards: mean: 0.33, std: 0.47, min: 0.00, max: 1.00
+Steps: 16000/1000000 Episodes: 11 Rewards: mean: 0.36, std: 0.48, min: 0.00, max: 1.00
+Steps: 20000/1000000 Episodes: 9 Rewards: mean: 0.22, std: 0.42, min: 0.00, max: 1.00
+Steps: 24000/1000000 Episodes: 9 Rewards: mean: 0.33, std: 0.47, min: 0.00, max: 1.00
+Steps: 28000/1000000 Episodes: 10 Rewards: mean: 0.30, std: 0.46, min: 0.00, max: 1.00
+Steps: 32000/1000000 Episodes: 10 Rewards: mean: 0.30, std: 0.46, min: 0.00, max: 1.00
+Steps: 36000/1000000 Episodes: 10 Rewards: mean: 0.20, std: 0.40, min: 0.00, max: 1.00
+Steps: 40000/1000000 Episodes: 10 Rewards: mean: 0.40, std: 0.49, min: 0.00, max: 1.00
+Steps: 44000/1000000 Episodes: 9 Rewards: mean: 0.22, std: 0.42, min: 0.00, max: 1.00
+Steps: 48000/1000000 Episodes: 8 Rewards: mean: 0.25, std: 0.43, min: 0.00, max: 1.00
+Steps: 52000/1000000 Episodes: 11 Rewards: mean: 0.36, std: 0.48, min: 0.00, max: 1.00
+Steps: 56000/1000000 Episodes: 11 Rewards: mean: 0.27, std: 0.45, min: 0.00, max: 1.00
+Steps: 60000/1000000 Episodes: 9 Rewards: mean: 0.33, std: 0.47, min: 0.00, max: 1.00
+Steps: 64000/1000000 Episodes: 8 Rewards: mean: 0.12, std: 0.33, min: 0.00, max: 1.00
+Steps: 68000/1000000 Episodes: 10 Rewards: mean: 0.30, std: 0.46, min: 0.00, max: 1.00
+Steps: 72000/1000000 Episodes: 9 Rewards: mean: 0.11, std: 0.31, min: 0.00, max: 1.00
+Steps: 76000/1000000 Episodes: 8 Rewards: mean: 0.00, std: 0.00, min: 0.00, max: 0.00
+Steps: 80000/1000000 Episodes: 8 Rewards: mean: 0.12, std: 0.33, min: 0.00, max: 1.00
+Steps: 84000/1000000 Episodes: 9 Rewards: mean: 0.33, std: 0.47, min: 0.00, max: 1.00
+Steps: 88000/1000000 Episodes: 13 Rewards: mean: 0.31, std: 0.46, min: 0.00, max: 1.00
+Steps: 92000/1000000 Episodes: 9 Rewards: mean: 0.11, std: 0.31, min: 0.00, max: 1.00
+Steps: 96000/1000000 Episodes: 11 Rewards: mean: 0.36, std: 0.48, min: 0.00, max: 1.00
+Steps: 100000/1000000 Episodes: 9 Rewards: mean: 0.22, std: 0.42, min: 0.00, max: 1.00
+Steps: 104000/1000000 Episodes: 9 Rewards: mean: 0.44, std: 0.50, min: 0.00, max: 1.00
+Steps: 108000/1000000 Episodes: 9 Rewards: mean: 0.00, std: 0.00, min: 0.00, max: 0.00
+Steps: 112000/1000000 Episodes: 9 Rewards: mean: 0.33, std: 0.47, min: 0.00, max: 1.00
+Steps: 116000/1000000 Episodes: 10 Rewards: mean: 0.20, std: 0.40, min: 0.00, max: 1.00
+Steps: 120000/1000000 Episodes: 8 Rewards: mean: 0.12, std: 0.33, min: 0.00, max: 1.00
+Steps: 124000/1000000 Episodes: 9 Rewards: mean: 0.22, std: 0.42, min: 0.00, max: 1.00
+Steps: 128000/1000000 Episodes: 11 Rewards: mean: 0.36, std: 0.48, min: 0.00, max: 1.00
+Steps: 132000/1000000 Episodes: 12 Rewards: mean: 0.50, std: 0.50, min: 0.00, max: 1.00
+Steps: 136000/1000000 Episodes: 8 Rewards: mean: 0.25, std: 0.43, min: 0.00, max: 1.00
+Steps: 140000/1000000 Episodes: 9 Rewards: mean: 0.22, std: 0.42, min: 0.00, max: 1.00
+Steps: 144000/1000000 Episodes: 9 Rewards: mean: 0.11, std: 0.31, min: 0.00, max: 1.00
+Steps: 148000/1000000 Episodes: 9 Rewards: mean: 0.44, std: 0.50, min: 0.00, max: 1.00
+Steps: 152000/1000000 Episodes: 11 Rewards: mean: 0.45, std: 0.50, min: 0.00, max: 1.00
+Steps: 156000/1000000 Episodes: 10 Rewards: mean: 0.00, std: 0.00, min: 0.00, max: 0.00
+Steps: 160000/1000000 Episodes: 15 Rewards: mean: 0.67, std: 0.47, min: 0.00, max: 1.00
+Steps: 164000/1000000 Episodes: 10 Rewards: mean: 0.50, std: 0.50, min: 0.00, max: 1.00
+Steps: 168000/1000000 Episodes: 9 Rewards: mean: 0.11, std: 0.31, min: 0.00, max: 1.00
+Steps: 172000/1000000 Episodes: 8 Rewards: mean: 0.25, std: 0.43, min: 0.00, max: 1.00
+Steps: 176000/1000000 Episodes: 14 Rewards: mean: 0.43, std: 0.49, min: 0.00, max: 1.00
+Steps: 180000/1000000 Episodes: 11 Rewards: mean: 0.36, std: 0.48, min: 0.00, max: 1.00
+Steps: 184000/1000000 Episodes: 13 Rewards: mean: 0.54, std: 0.50, min: 0.00, max: 1.00
+Steps: 188000/1000000 Episodes: 14 Rewards: mean: 0.36, std: 0.48, min: 0.00, max: 1.00
+Steps: 192000/1000000 Episodes: 18 Rewards: mean: 0.78, std: 0.42, min: 0.00, max: 1.00
+Steps: 196000/1000000 Episodes: 13 Rewards: mean: 0.54, std: 0.50, min: 0.00, max: 1.00
+Steps: 200000/1000000 Episodes: 14 Rewards: mean: 0.29, std: 0.45, min: 0.00, max: 1.00
+Steps: 204000/1000000 Episodes: 9 Rewards: mean: 0.44, std: 0.50, min: 0.00, max: 1.00
+Steps: 208000/1000000 Episodes: 15 Rewards: mean: 0.53, std: 0.50, min: 0.00, max: 1.00
+Steps: 212000/1000000 Episodes: 16 Rewards: mean: 0.62, std: 0.48, min: 0.00, max: 1.00
+Steps: 216000/1000000 Episodes: 12 Rewards: mean: 0.33, std: 0.47, min: 0.00, max: 1.00
+Steps: 220000/1000000 Episodes: 14 Rewards: mean: 0.43, std: 0.49, min: 0.00, max: 1.00
+Steps: 224000/1000000 Episodes: 12 Rewards: mean: 0.58, std: 0.49, min: 0.00, max: 1.00
+Steps: 228000/1000000 Episodes: 18 Rewards: mean: 0.56, std: 0.50, min: 0.00, max: 1.00
+Steps: 232000/1000000 Episodes: 12 Rewards: mean: 0.50, std: 0.50, min: 0.00, max: 1.00
+Steps: 236000/1000000 Episodes: 18 Rewards: mean: 0.61, std: 0.49, min: 0.00, max: 1.00
+Steps: 240000/1000000 Episodes: 20 Rewards: mean: 0.60, std: 0.49, min: 0.00, max: 1.00
+Steps: 244000/1000000 Episodes: 11 Rewards: mean: 0.36, std: 0.48, min: 0.00, max: 1.00
+Steps: 248000/1000000 Episodes: 16 Rewards: mean: 0.75, std: 0.43, min: 0.00, max: 1.00
+Steps: 252000/1000000 Episodes: 23 Rewards: mean: 0.74, std: 0.44, min: 0.00, max: 1.00
+Steps: 256000/1000000 Episodes: 17 Rewards: mean: 0.82, std: 0.38, min: 0.00, max: 1.00
+Steps: 260000/1000000 Episodes: 11 Rewards: mean: 0.36, std: 0.48, min: 0.00, max: 1.00
+Steps: 264000/1000000 Episodes: 15 Rewards: mean: 0.60, std: 0.49, min: 0.00, max: 1.00
+Steps: 268000/1000000 Episodes: 13 Rewards: mean: 0.38, std: 0.49, min: 0.00, max: 1.00
+Steps: 272000/1000000 Episodes: 16 Rewards: mean: 0.69, std: 0.46, min: 0.00, max: 1.00
+Steps: 276000/1000000 Episodes: 15 Rewards: mean: 0.60, std: 0.49, min: 0.00, max: 1.00
+Steps: 280000/1000000 Episodes: 13 Rewards: mean: 0.69, std: 0.46, min: 0.00, max: 1.00
+Steps: 284000/1000000 Episodes: 11 Rewards: mean: 0.64, std: 0.48, min: 0.00, max: 1.00
+Steps: 288000/1000000 Episodes: 18 Rewards: mean: 0.72, std: 0.45, min: 0.00, max: 1.00
+Steps: 292000/1000000 Episodes: 12 Rewards: mean: 0.42, std: 0.49, min: 0.00, max: 1.00
+Steps: 296000/1000000 Episodes: 16 Rewards: mean: 0.75, std: 0.43, min: 0.00, max: 1.00
+Steps: 300000/1000000 Episodes: 21 Rewards: mean: 0.71, std: 0.45, min: 0.00, max: 1.00
+Steps: 304000/1000000 Episodes: 16 Rewards: mean: 0.88, std: 0.33, min: 0.00, max: 1.00
+Steps: 308000/1000000 Episodes: 17 Rewards: mean: 0.53, std: 0.50, min: 0.00, max: 1.00
+Steps: 312000/1000000 Episodes: 18 Rewards: mean: 0.67, std: 0.47, min: 0.00, max: 1.00
+Steps: 316000/1000000 Episodes: 23 Rewards: mean: 0.61, std: 0.49, min: 0.00, max: 1.00
+Steps: 320000/1000000 Episodes: 25 Rewards: mean: 0.64, std: 0.48, min: 0.00, max: 1.00
+Steps: 324000/1000000 Episodes: 12 Rewards: mean: 0.42, std: 0.49, min: 0.00, max: 1.00
+Steps: 328000/1000000 Episodes: 16 Rewards: mean: 0.62, std: 0.48, min: 0.00, max: 1.00
+Steps: 332000/1000000 Episodes: 18 Rewards: mean: 0.56, std: 0.50, min: 0.00, max: 1.00
+Steps: 336000/1000000 Episodes: 16 Rewards: mean: 0.62, std: 0.48, min: 0.00, max: 1.00
+Steps: 340000/1000000 Episodes: 16 Rewards: mean: 0.62, std: 0.48, min: 0.00, max: 1.00
+Steps: 344000/1000000 Episodes: 17 Rewards: mean: 0.76, std: 0.42, min: 0.00, max: 1.00
+Steps: 348000/1000000 Episodes: 15 Rewards: mean: 0.73, std: 0.44, min: 0.00, max: 1.00
+Steps: 352000/1000000 Episodes: 15 Rewards: mean: 0.60, std: 0.49, min: 0.00, max: 1.00
+Steps: 356000/1000000 Episodes: 18 Rewards: mean: 0.61, std: 0.49, min: 0.00, max: 1.00
+Steps: 360000/1000000 Episodes: 14 Rewards: mean: 0.64, std: 0.48, min: 0.00, max: 1.00
+Steps: 364000/1000000 Episodes: 17 Rewards: mean: 0.41, std: 0.49, min: 0.00, max: 1.00
+Steps: 368000/1000000 Episodes: 16 Rewards: mean: 0.69, std: 0.46, min: 0.00, max: 1.00
+Steps: 372000/1000000 Episodes: 14 Rewards: mean: 0.50, std: 0.50, min: 0.00, max: 1.00
+Steps: 376000/1000000 Episodes: 19 Rewards: mean: 0.74, std: 0.44, min: 0.00, max: 1.00
+Steps: 380000/1000000 Episodes: 18 Rewards: mean: 0.72, std: 0.45, min: 0.00, max: 1.00
+Steps: 384000/1000000 Episodes: 18 Rewards: mean: 0.72, std: 0.45, min: 0.00, max: 1.00
+Steps: 388000/1000000 Episodes: 18 Rewards: mean: 0.67, std: 0.47, min: 0.00, max: 1.00
+Steps: 392000/1000000 Episodes: 20 Rewards: mean: 0.60, std: 0.49, min: 0.00, max: 1.00
+Steps: 396000/1000000 Episodes: 20 Rewards: mean: 0.55, std: 0.50, min: 0.00, max: 1.00
+Steps: 400000/1000000 Episodes: 19 Rewards: mean: 0.63, std: 0.48, min: 0.00, max: 1.00
+Steps: 404000/1000000 Episodes: 18 Rewards: mean: 0.56, std: 0.50, min: 0.00, max: 1.00
+Steps: 408000/1000000 Episodes: 18 Rewards: mean: 0.72, std: 0.45, min: 0.00, max: 1.00
+Steps: 412000/1000000 Episodes: 13 Rewards: mean: 0.46, std: 0.50, min: 0.00, max: 1.00
+Steps: 416000/1000000 Episodes: 15 Rewards: mean: 0.73, std: 0.44, min: 0.00, max: 1.00
+Steps: 420000/1000000 Episodes: 18 Rewards: mean: 0.61, std: 0.49, min: 0.00, max: 1.00
+Steps: 424000/1000000 Episodes: 17 Rewards: mean: 0.59, std: 0.49, min: 0.00, max: 1.00
+Steps: 428000/1000000 Episodes: 15 Rewards: mean: 0.60, std: 0.49, min: 0.00, max: 1.00
+Steps: 432000/1000000 Episodes: 16 Rewards: mean: 0.69, std: 0.46, min: 0.00, max: 1.00
+Steps: 436000/1000000 Episodes: 23 Rewards: mean: 0.61, std: 0.49, min: 0.00, max: 1.00
+Steps: 440000/1000000 Episodes: 17 Rewards: mean: 0.76, std: 0.42, min: 0.00, max: 1.00
+Steps: 444000/1000000 Episodes: 11 Rewards: mean: 0.45, std: 0.50, min: 0.00, max: 1.00
+Steps: 448000/1000000 Episodes: 11 Rewards: mean: 0.36, std: 0.48, min: 0.00, max: 1.00
+Steps: 452000/1000000 Episodes: 17 Rewards: mean: 0.47, std: 0.50, min: 0.00, max: 1.00
+Steps: 456000/1000000 Episodes: 20 Rewards: mean: 0.65, std: 0.48, min: 0.00, max: 1.00
+Steps: 460000/1000000 Episodes: 15 Rewards: mean: 0.67, std: 0.47, min: 0.00, max: 1.00
+Steps: 464000/1000000 Episodes: 17 Rewards: mean: 0.82, std: 0.38, min: 0.00, max: 1.00
+Steps: 468000/1000000 Episodes: 17 Rewards: mean: 0.71, std: 0.46, min: 0.00, max: 1.00
+Steps: 472000/1000000 Episodes: 18 Rewards: mean: 0.61, std: 0.49, min: 0.00, max: 1.00
+Steps: 476000/1000000 Episodes: 22 Rewards: mean: 0.68, std: 0.47, min: 0.00, max: 1.00
+Steps: 480000/1000000 Episodes: 19 Rewards: mean: 0.68, std: 0.46, min: 0.00, max: 1.00
+Steps: 484000/1000000 Episodes: 16 Rewards: mean: 0.69, std: 0.46, min: 0.00, max: 1.00
+Steps: 488000/1000000 Episodes: 19 Rewards: mean: 0.79, std: 0.41, min: 0.00, max: 1.00
+Steps: 492000/1000000 Episodes: 17 Rewards: mean: 0.71, std: 0.46, min: 0.00, max: 1.00
+Steps: 496000/1000000 Episodes: 21 Rewards: mean: 0.71, std: 0.45, min: 0.00, max: 1.00
+Steps: 500000/1000000 Episodes: 21 Rewards: mean: 0.67, std: 0.47, min: 0.00, max: 1.00
+Steps: 504000/1000000 Episodes: 15 Rewards: mean: 0.67, std: 0.47, min: 0.00, max: 1.00
+Steps: 508000/1000000 Episodes: 15 Rewards: mean: 0.40, std: 0.49, min: 0.00, max: 1.00
+Steps: 512000/1000000 Episodes: 18 Rewards: mean: 0.72, std: 0.45, min: 0.00, max: 1.00
+Steps: 516000/1000000 Episodes: 16 Rewards: mean: 0.69, std: 0.46, min: 0.00, max: 1.00
+Steps: 520000/1000000 Episodes: 21 Rewards: mean: 0.81, std: 0.39, min: 0.00, max: 1.00
+Steps: 524000/1000000 Episodes: 16 Rewards: mean: 0.56, std: 0.50, min: 0.00, max: 1.00
+Steps: 528000/1000000 Episodes: 22 Rewards: mean: 0.68, std: 0.47, min: 0.00, max: 1.00
+Steps: 532000/1000000 Episodes: 14 Rewards: mean: 0.50, std: 0.50, min: 0.00, max: 1.00
+Steps: 536000/1000000 Episodes: 19 Rewards: mean: 0.74, std: 0.44, min: 0.00, max: 1.00
+Steps: 540000/1000000 Episodes: 27 Rewards: mean: 0.67, std: 0.47, min: 0.00, max: 1.00
+Steps: 544000/1000000 Episodes: 18 Rewards: mean: 0.44, std: 0.50, min: 0.00, max: 1.00
+Steps: 548000/1000000 Episodes: 19 Rewards: mean: 0.53, std: 0.50, min: 0.00, max: 1.00
+Steps: 552000/1000000 Episodes: 31 Rewards: mean: 0.77, std: 0.42, min: 0.00, max: 1.00
+Steps: 556000/1000000 Episodes: 26 Rewards: mean: 0.62, std: 0.49, min: 0.00, max: 1.00
+Steps: 560000/1000000 Episodes: 17 Rewards: mean: 0.59, std: 0.49, min: 0.00, max: 1.00
+Steps: 564000/1000000 Episodes: 21 Rewards: mean: 0.67, std: 0.47, min: 0.00, max: 1.00
+Steps: 568000/1000000 Episodes: 19 Rewards: mean: 0.58, std: 0.49, min: 0.00, max: 1.00
+Steps: 572000/1000000 Episodes: 15 Rewards: mean: 0.73, std: 0.44, min: 0.00, max: 1.00
+Steps: 576000/1000000 Episodes: 14 Rewards: mean: 0.36, std: 0.48, min: 0.00, max: 1.00
+Steps: 580000/1000000 Episodes: 17 Rewards: mean: 0.59, std: 0.49, min: 0.00, max: 1.00
+Steps: 584000/1000000 Episodes: 19 Rewards: mean: 0.58, std: 0.49, min: 0.00, max: 1.00
+Steps: 588000/1000000 Episodes: 15 Rewards: mean: 0.40, std: 0.49, min: 0.00, max: 1.00
+Steps: 592000/1000000 Episodes: 15 Rewards: mean: 0.67, std: 0.47, min: 0.00, max: 1.00
+Steps: 596000/1000000 Episodes: 12 Rewards: mean: 0.67, std: 0.47, min: 0.00, max: 1.00
+Steps: 600000/1000000 Episodes: 20 Rewards: mean: 0.60, std: 0.49, min: 0.00, max: 1.00
+Steps: 604000/1000000 Episodes: 19 Rewards: mean: 0.74, std: 0.44, min: 0.00, max: 1.00
+Steps: 608000/1000000 Episodes: 15 Rewards: mean: 0.47, std: 0.50, min: 0.00, max: 1.00
+Steps: 612000/1000000 Episodes: 20 Rewards: mean: 0.60, std: 0.49, min: 0.00, max: 1.00
+Steps: 616000/1000000 Episodes: 22 Rewards: mean: 0.59, std: 0.49, min: 0.00, max: 1.00
+Steps: 620000/1000000 Episodes: 17 Rewards: mean: 0.59, std: 0.49, min: 0.00, max: 1.00
+Steps: 624000/1000000 Episodes: 19 Rewards: mean: 0.74, std: 0.44, min: 0.00, max: 1.00
+Steps: 628000/1000000 Episodes: 18 Rewards: mean: 0.56, std: 0.50, min: 0.00, max: 1.00
+Steps: 632000/1000000 Episodes: 13 Rewards: mean: 0.38, std: 0.49, min: 0.00, max: 1.00
+Steps: 636000/1000000 Episodes: 16 Rewards: mean: 0.69, std: 0.46, min: 0.00, max: 1.00
+Steps: 640000/1000000 Episodes: 16 Rewards: mean: 0.38, std: 0.48, min: 0.00, max: 1.00
+Steps: 644000/1000000 Episodes: 18 Rewards: mean: 0.72, std: 0.45, min: 0.00, max: 1.00
+Steps: 648000/1000000 Episodes: 17 Rewards: mean: 0.76, std: 0.42, min: 0.00, max: 1.00
+Steps: 652000/1000000 Episodes: 19 Rewards: mean: 0.74, std: 0.44, min: 0.00, max: 1.00
+Steps: 656000/1000000 Episodes: 16 Rewards: mean: 0.56, std: 0.50, min: 0.00, max: 1.00
+Steps: 660000/1000000 Episodes: 16 Rewards: mean: 0.69, std: 0.46, min: 0.00, max: 1.00
+Steps: 664000/1000000 Episodes: 18 Rewards: mean: 0.72, std: 0.45, min: 0.00, max: 1.00
+Steps: 668000/1000000 Episodes: 22 Rewards: mean: 0.73, std: 0.45, min: 0.00, max: 1.00
+Steps: 672000/1000000 Episodes: 22 Rewards: mean: 0.77, std: 0.42, min: 0.00, max: 1.00
+Steps: 676000/1000000 Episodes: 20 Rewards: mean: 0.60, std: 0.49, min: 0.00, max: 1.00
+Steps: 680000/1000000 Episodes: 20 Rewards: mean: 0.55, std: 0.50, min: 0.00, max: 1.00
+Steps: 684000/1000000 Episodes: 22 Rewards: mean: 0.68, std: 0.47, min: 0.00, max: 1.00
+Steps: 688000/1000000 Episodes: 16 Rewards: mean: 0.56, std: 0.50, min: 0.00, max: 1.00
+Steps: 692000/1000000 Episodes: 15 Rewards: mean: 0.47, std: 0.50, min: 0.00, max: 1.00
+Steps: 696000/1000000 Episodes: 17 Rewards: mean: 0.53, std: 0.50, min: 0.00, max: 1.00
+Steps: 700000/1000000 Episodes: 13 Rewards: mean: 0.62, std: 0.49, min: 0.00, max: 1.00
+Steps: 704000/1000000 Episodes: 15 Rewards: mean: 0.73, std: 0.44, min: 0.00, max: 1.00
+Steps: 708000/1000000 Episodes: 13 Rewards: mean: 0.54, std: 0.50, min: 0.00, max: 1.00
+Steps: 712000/1000000 Episodes: 16 Rewards: mean: 0.75, std: 0.43, min: 0.00, max: 1.00
+Steps: 716000/1000000 Episodes: 16 Rewards: mean: 0.50, std: 0.50, min: 0.00, max: 1.00
+Steps: 720000/1000000 Episodes: 17 Rewards: mean: 0.65, std: 0.48, min: 0.00, max: 1.00
+Steps: 724000/1000000 Episodes: 18 Rewards: mean: 0.56, std: 0.50, min: 0.00, max: 1.00
+Steps: 728000/1000000 Episodes: 18 Rewards: mean: 0.72, std: 0.45, min: 0.00, max: 1.00
+Steps: 732000/1000000 Episodes: 18 Rewards: mean: 0.44, std: 0.50, min: 0.00, max: 1.00
+Steps: 736000/1000000 Episodes: 16 Rewards: mean: 0.56, std: 0.50, min: 0.00, max: 1.00
+Steps: 740000/1000000 Episodes: 23 Rewards: mean: 0.61, std: 0.49, min: 0.00, max: 1.00
+Steps: 744000/1000000 Episodes: 13 Rewards: mean: 0.46, std: 0.50, min: 0.00, max: 1.00
+Steps: 748000/1000000 Episodes: 16 Rewards: mean: 0.62, std: 0.48, min: 0.00, max: 1.00
+Steps: 752000/1000000 Episodes: 16 Rewards: mean: 0.69, std: 0.46, min: 0.00, max: 1.00
+Steps: 756000/1000000 Episodes: 18 Rewards: mean: 0.56, std: 0.50, min: 0.00, max: 1.00
+Steps: 760000/1000000 Episodes: 20 Rewards: mean: 0.70, std: 0.46, min: 0.00, max: 1.00
+Steps: 764000/1000000 Episodes: 17 Rewards: mean: 0.59, std: 0.49, min: 0.00, max: 1.00
+Steps: 768000/1000000 Episodes: 14 Rewards: mean: 0.64, std: 0.48, min: 0.00, max: 1.00
+Steps: 772000/1000000 Episodes: 18 Rewards: mean: 0.56, std: 0.50, min: 0.00, max: 1.00
+Steps: 776000/1000000 Episodes: 14 Rewards: mean: 0.50, std: 0.50, min: 0.00, max: 1.00
+Steps: 780000/1000000 Episodes: 14 Rewards: mean: 0.64, std: 0.48, min: 0.00, max: 1.00
+Steps: 784000/1000000 Episodes: 27 Rewards: mean: 0.70, std: 0.46, min: 0.00, max: 1.00
+Steps: 788000/1000000 Episodes: 17 Rewards: mean: 0.76, std: 0.42, min: 0.00, max: 1.00
+Steps: 792000/1000000 Episodes: 28 Rewards: mean: 0.79, std: 0.41, min: 0.00, max: 1.00
+Steps: 796000/1000000 Episodes: 18 Rewards: mean: 0.72, std: 0.45, min: 0.00, max: 1.00
+Steps: 800000/1000000 Episodes: 14 Rewards: mean: 0.50, std: 0.50, min: 0.00, max: 1.00
+Steps: 804000/1000000 Episodes: 21 Rewards: mean: 0.57, std: 0.49, min: 0.00, max: 1.00
+Steps: 808000/1000000 Episodes: 19 Rewards: mean: 0.58, std: 0.49, min: 0.00, max: 1.00
+Steps: 812000/1000000 Episodes: 16 Rewards: mean: 0.56, std: 0.50, min: 0.00, max: 1.00
+Steps: 816000/1000000 Episodes: 16 Rewards: mean: 0.50, std: 0.50, min: 0.00, max: 1.00
+Steps: 820000/1000000 Episodes: 16 Rewards: mean: 0.56, std: 0.50, min: 0.00, max: 1.00
+Steps: 824000/1000000 Episodes: 15 Rewards: mean: 0.53, std: 0.50, min: 0.00, max: 1.00
+Steps: 828000/1000000 Episodes: 14 Rewards: mean: 0.57, std: 0.49, min: 0.00, max: 1.00
+Steps: 832000/1000000 Episodes: 19 Rewards: mean: 0.79, std: 0.41, min: 0.00, max: 1.00
+Steps: 836000/1000000 Episodes: 16 Rewards: mean: 0.50, std: 0.50, min: 0.00, max: 1.00
+Steps: 840000/1000000 Episodes: 24 Rewards: mean: 0.71, std: 0.45, min: 0.00, max: 1.00
+Steps: 844000/1000000 Episodes: 16 Rewards: mean: 0.69, std: 0.46, min: 0.00, max: 1.00
+Steps: 848000/1000000 Episodes: 13 Rewards: mean: 0.38, std: 0.49, min: 0.00, max: 1.00
+Steps: 852000/1000000 Episodes: 18 Rewards: mean: 0.56, std: 0.50, min: 0.00, max: 1.00
+Steps: 856000/1000000 Episodes: 16 Rewards: mean: 0.69, std: 0.46, min: 0.00, max: 1.00
+Steps: 860000/1000000 Episodes: 19 Rewards: mean: 0.68, std: 0.46, min: 0.00, max: 1.00
+Steps: 864000/1000000 Episodes: 15 Rewards: mean: 0.60, std: 0.49, min: 0.00, max: 1.00
+Steps: 868000/1000000 Episodes: 18 Rewards: mean: 0.56, std: 0.50, min: 0.00, max: 1.00
+Steps: 872000/1000000 Episodes: 22 Rewards: mean: 0.73, std: 0.45, min: 0.00, max: 1.00
+Steps: 876000/1000000 Episodes: 24 Rewards: mean: 0.83, std: 0.37, min: 0.00, max: 1.00
+Steps: 880000/1000000 Episodes: 18 Rewards: mean: 0.67, std: 0.47, min: 0.00, max: 1.00
+Steps: 884000/1000000 Episodes: 12 Rewards: mean: 0.50, std: 0.50, min: 0.00, max: 1.00
+Steps: 888000/1000000 Episodes: 24 Rewards: mean: 0.71, std: 0.45, min: 0.00, max: 1.00
+Steps: 892000/1000000 Episodes: 22 Rewards: mean: 0.59, std: 0.49, min: 0.00, max: 1.00
+Steps: 896000/1000000 Episodes: 22 Rewards: mean: 0.68, std: 0.47, min: 0.00, max: 1.00
+Steps: 900000/1000000 Episodes: 13 Rewards: mean: 0.69, std: 0.46, min: 0.00, max: 1.00
+Steps: 904000/1000000 Episodes: 17 Rewards: mean: 0.65, std: 0.48, min: 0.00, max: 1.00
+Steps: 908000/1000000 Episodes: 26 Rewards: mean: 0.62, std: 0.49, min: 0.00, max: 1.00
+Steps: 912000/1000000 Episodes: 24 Rewards: mean: 0.71, std: 0.45, min: 0.00, max: 1.00
+Steps: 916000/1000000 Episodes: 26 Rewards: mean: 0.62, std: 0.49, min: 0.00, max: 1.00
+Steps: 920000/1000000 Episodes: 27 Rewards: mean: 0.67, std: 0.47, min: 0.00, max: 1.00
+Steps: 924000/1000000 Episodes: 24 Rewards: mean: 0.42, std: 0.49, min: 0.00, max: 1.00
+Steps: 928000/1000000 Episodes: 19 Rewards: mean: 0.58, std: 0.49, min: 0.00, max: 1.00
+Steps: 932000/1000000 Episodes: 23 Rewards: mean: 0.61, std: 0.49, min: 0.00, max: 1.00
+Steps: 936000/1000000 Episodes: 21 Rewards: mean: 0.81, std: 0.39, min: 0.00, max: 1.00
+Steps: 940000/1000000 Episodes: 17 Rewards: mean: 0.59, std: 0.49, min: 0.00, max: 1.00
+Steps: 944000/1000000 Episodes: 13 Rewards: mean: 0.62, std: 0.49, min: 0.00, max: 1.00
+Steps: 948000/1000000 Episodes: 17 Rewards: mean: 0.53, std: 0.50, min: 0.00, max: 1.00
+Steps: 952000/1000000 Episodes: 18 Rewards: mean: 0.67, std: 0.47, min: 0.00, max: 1.00
+Steps: 956000/1000000 Episodes: 24 Rewards: mean: 0.71, std: 0.45, min: 0.00, max: 1.00
+Steps: 960000/1000000 Episodes: 17 Rewards: mean: 0.65, std: 0.48, min: 0.00, max: 1.00
+Steps: 964000/1000000 Episodes: 19 Rewards: mean: 0.58, std: 0.49, min: 0.00, max: 1.00
+Steps: 968000/1000000 Episodes: 20 Rewards: mean: 0.55, std: 0.50, min: 0.00, max: 1.00
+Steps: 972000/1000000 Episodes: 15 Rewards: mean: 0.53, std: 0.50, min: 0.00, max: 1.00
+Steps: 976000/1000000 Episodes: 19 Rewards: mean: 0.68, std: 0.46, min: 0.00, max: 1.00
+Steps: 980000/1000000 Episodes: 19 Rewards: mean: 0.79, std: 0.41, min: 0.00, max: 1.00
+Steps: 984000/1000000 Episodes: 22 Rewards: mean: 0.82, std: 0.39, min: 0.00, max: 1.00
+Steps: 988000/1000000 Episodes: 24 Rewards: mean: 0.71, std: 0.45, min: 0.00, max: 1.00
+Steps: 992000/1000000 Episodes: 17 Rewards: mean: 0.71, std: 0.46, min: 0.00, max: 1.00
+Steps: 996000/1000000 Episodes: 17 Rewards: mean: 0.41, std: 0.49, min: 0.00, max: 1.00
+Steps: 1000000/1000000 Episodes: 18 Rewards: mean: 0.56, std: 0.50, min: 0.00, max: 1.00
+Mean Scores [0.14, 0.3, 0.33, 0.36, 0.22, 0.33, 0.3, 0.3, 0.2, 0.4, 0.22, 0.25, 0.36, 0.27, 0.33, 0.12, 0.3, 0.11, 0.0, 0.12, 0.33, 0.31, 0.11, 0.36, 0.22, 0.44, 0.0, 0.33, 0.2, 0.12, 0.22, 0.36, 0.5, 0.25, 0.22, 0.11, 0.44, 0.45, 0.0, 0.67, 0.5, 0.11, 0.25, 0.43, 0.36, 0.54, 0.36, 0.78, 0.54, 0.29, 0.44, 0.53, 0.62, 0.33, 0.43, 0.58, 0.56, 0.5, 0.61, 0.6, 0.36, 0.75, 0.74, 0.82, 0.36, 0.6, 0.38, 0.69, 0.6, 0.69, 0.64, 0.72, 0.42, 0.75, 0.71, 0.88, 0.53, 0.67, 0.61, 0.64, 0.42, 0.62, 0.56, 0.62, 0.62, 0.76, 0.73, 0.6, 0.61, 0.64, 0.41, 0.69, 0.5, 0.74, 0.72, 0.72, 0.67, 0.6, 0.55, 0.63, 0.56, 0.72, 0.46, 0.73, 0.61, 0.59, 0.6, 0.69, 0.61, 0.76, 0.45, 0.36, 0.47, 0.65, 0.67, 0.82, 0.71, 0.61, 0.68, 0.68, 0.69, 0.79, 0.71, 0.71, 0.67, 0.67, 0.4, 0.72, 0.69, 0.81, 0.56, 0.68, 0.5, 0.74, 0.67, 0.44, 0.53, 0.77, 0.62, 0.59, 0.67, 0.58, 0.73, 0.36, 0.59, 0.58, 0.4, 0.67, 0.67, 0.6, 0.74, 0.47, 0.6, 0.59, 0.59, 0.74, 0.56, 0.38, 0.69, 0.38, 0.72, 0.76, 0.74, 0.56, 0.69, 0.72, 0.73, 0.77, 0.6, 0.55, 0.68, 0.56, 0.47, 0.53, 0.62, 0.73, 0.54, 0.75, 0.5, 0.65, 0.56, 0.72, 0.44, 0.56, 0.61, 0.46, 0.62, 0.69, 0.56, 0.7, 0.59, 0.64, 0.56, 0.5, 0.64, 0.7, 0.76, 0.79, 0.72, 0.5, 0.57, 0.58, 0.56, 0.5, 0.56, 0.53, 0.57, 0.79, 0.5, 0.71, 0.69, 0.38, 0.56, 0.69, 0.68, 0.6, 0.56, 0.73, 0.83, 0.67, 0.5, 0.71, 0.59, 0.68, 0.69, 0.65, 0.62, 0.71, 0.62, 0.67, 0.42, 0.58, 0.61, 0.81, 0.59, 0.62, 0.53, 0.67, 0.71, 0.65, 0.58, 0.55, 0.53, 0.68, 0.79, 0.82, 0.71, 0.71, 0.41, 0.56]
+Mean List Reward [[0.14, 0.3, 0.33, 0.36, 0.22, 0.33, 0.3, 0.3, 0.2, 0.4, 0.22, 0.25, 0.36, 0.27, 0.33, 0.12, 0.3, 0.11, 0.0, 0.12, 0.33, 0.31, 0.11, 0.36, 0.22, 0.44, 0.0, 0.33, 0.2, 0.12, 0.22, 0.36, 0.5, 0.25, 0.22, 0.11, 0.44, 0.45, 0.0, 0.67, 0.5, 0.11, 0.25, 0.43, 0.36, 0.54, 0.36, 0.78, 0.54, 0.29, 0.44, 0.53, 0.62, 0.33, 0.43, 0.58, 0.56, 0.5, 0.61, 0.6, 0.36, 0.75, 0.74, 0.82, 0.36, 0.6, 0.38, 0.69, 0.6, 0.69, 0.64, 0.72, 0.42, 0.75, 0.71, 0.88, 0.53, 0.67, 0.61, 0.64, 0.42, 0.62, 0.56, 0.62, 0.62, 0.76, 0.73, 0.6, 0.61, 0.64, 0.41, 0.69, 0.5, 0.74, 0.72, 0.72, 0.67, 0.6, 0.55, 0.63, 0.56, 0.72, 0.46, 0.73, 0.61, 0.59, 0.6, 0.69, 0.61, 0.76, 0.45, 0.36, 0.47, 0.65, 0.67, 0.82, 0.71, 0.61, 0.68, 0.68, 0.69, 0.79, 0.71, 0.71, 0.67, 0.67, 0.4, 0.72, 0.69, 0.81, 0.56, 0.68, 0.5, 0.74, 0.67, 0.44, 0.53, 0.77, 0.62, 0.59, 0.67, 0.58, 0.73, 0.36, 0.59, 0.58, 0.4, 0.67, 0.67, 0.6, 0.74, 0.47, 0.6, 0.59, 0.59, 0.74, 0.56, 0.38, 0.69, 0.38, 0.72, 0.76, 0.74, 0.56, 0.69, 0.72, 0.73, 0.77, 0.6, 0.55, 0.68, 0.56, 0.47, 0.53, 0.62, 0.73, 0.54, 0.75, 0.5, 0.65, 0.56, 0.72, 0.44, 0.56, 0.61, 0.46, 0.62, 0.69, 0.56, 0.7, 0.59, 0.64, 0.56, 0.5, 0.64, 0.7, 0.76, 0.79, 0.72, 0.5, 0.57, 0.58, 0.56, 0.5, 0.56, 0.53, 0.57, 0.79, 0.5, 0.71, 0.69, 0.38, 0.56, 0.69, 0.68, 0.6, 0.56, 0.73, 0.83, 0.67, 0.5, 0.71, 0.59, 0.68, 0.69, 0.65, 0.62, 0.71, 0.62, 0.67, 0.42, 0.58, 0.61, 0.81, 0.59, 0.62, 0.53, 0.67, 0.71, 0.65, 0.58, 0.55, 0.53, 0.68, 0.79, 0.82, 0.71, 0.71, 0.41, 0.56]]
+No handles with labels found to put in legend.
+/home/woubie/.local/lib/python3.6/site-packages/matplotlib/figure.py:445: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  % get_backend())
+Running Test 1
+Total reward: 1.0
+Total reward: 0.0
+Total reward: 1.0
+Total reward: 0.0
+Total reward: 0.0
+Total reward: 0.0
+Total reward: 0.0
+Total reward: 1.0
+Total reward: 1.0
+Total reward: 1.0
+********************
+Running Test 2
+Total reward: 0.0
+Total reward: 1.0
+Total reward: 0.0
+Total reward: 1.0
+Total reward: 0.0
+Total reward: 1.0
+Total reward: 0.0
+Total reward: 1.0
+Total reward: 0.0
+Total reward: 1.0
+********************
+Running Test 3
+Total reward: 1.0
+Total reward: 0.0
+Total reward: 0.0
+Total reward: 0.0
+Total reward: 1.0
+Total reward: 1.0
+Total reward: 0.0
+Total reward: 1.0
+Total reward: 0.0
+Total reward: 1.0
+********************
+[[1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0], [0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0], [1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0]]
+Mean Reward [0.66666667 0.33333333 0.33333333 0.33333333 0.33333333 0.66666667
+ 0.         1.         0.33333333 1.        ]
+Std Reward [0.47140452 0.47140452 0.47140452 0.47140452 0.47140452 0.47140452
+ 0.         0.         0.47140452 0.        ]

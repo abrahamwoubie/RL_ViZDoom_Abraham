@@ -294,14 +294,12 @@ def Test_Model(agent):
                 if (env.IsEpisodeFinished()):
                     break
 
-                state_raw = env.Observation()
+                state_raw_pixel,state_raw_audio = env.Observation()
+
         list_Reward.append(reward_list)
-        print('********************')
-    print(list_Reward)
-    mu_reward = np.mean(list_Reward, axis=0)
-    std_reward = np.std(list_Reward, axis=0)
-    print('Mean Reward',mu_reward)
-    print('Std Reward',std_reward)
+        success=(reward_list.count(1.0)/number_of_episodes)*100
+        success_percentate=str(success)+'%'
+        print('Success percentage',success_percentate)
     #
     # time = np.arange(1, len(list_Reward[0]) + 1, 1.0)
     # plt.plot(time, mu_reward, color='green', label='Test Mean Reward')

@@ -9,8 +9,8 @@ class GlobalVariables :
     Learning_Rate = 0.00025
     Discount_Factor = 0.99
 
-    frame_repeat = 4
-    channels = 1
+    frame_repeat = 10
+    channels = 3
 
     channels_audio = 1
 

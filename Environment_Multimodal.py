@@ -74,7 +74,6 @@ class Environment_Multimodal(object):
         player_position_y=s.game_variables[1]
         samples= Extract.Extract_Samples(self,player_position_x,player_position_y)
         pixel_data=(self.game.get_state().screen_buffer)
-        pixel_data=pixel_data[:,:,1]
         return pixel_data,samples
 
     def MapActions(self, action_raw):

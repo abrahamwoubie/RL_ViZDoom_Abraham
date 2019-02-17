@@ -37,7 +37,7 @@ class Environment(object):
         
         self.game.set_episode_timeout(2100)
         self.game.set_episode_start_time(14)
-        self.game.set_window_visible(False)
+        self.game.set_window_visible(True)
         self.game.set_sound_enabled(False)
         self.game.set_living_reward(0)
         self.game.set_mode(Mode.PLAYER)

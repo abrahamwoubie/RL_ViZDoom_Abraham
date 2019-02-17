@@ -8,7 +8,7 @@ import time
 import sys
 import os
 import matplotlib.pyplot as plt
-
+from vizdoom import *
 import numpy as np
 import tensorflow as tf
 import matplotlib.ticker as ticker
@@ -40,8 +40,8 @@ def MakeDir(path):
     except:
         pass
 
-Load_Model = False
-Train_Model = True
+Load_Model = True
+Train_Model = False
 
 Working_Directory = "./"
 scenario_file = Working_Directory + "find.wad"
@@ -236,14 +236,13 @@ def Test_Model(agent):
 
     list_Episode = []
     list_Reward = []
-    how_many_times=5
-
+    how_many_times=1
     for i in range(1,how_many_times+1):
         print('Running Test',i)
         reward_list=[]
         episode_list=[]
         reward_total = 0
-        number_of_episodes = 50
+        number_of_episodes = 100
         test=0
         while (test < number_of_episodes):
 
@@ -268,12 +267,15 @@ def Test_Model(agent):
 
                 state_raw = env.Observation()
         list_Reward.append(reward_list)
-        print('********************')
-    print(list_Reward)
-    mu_reward = np.mean(list_Reward, axis=0)
-    std_reward = np.std(list_Reward, axis=0)
-    print('Mean Reward',mu_reward)
-    print('Std Reward',std_reward)
+        success=(reward_list.count(1.0)/number_of_episodes)*100
+        success_percentate=str(success)+'%'
+        print('Success percentage',success_percentate)
+    #     print('********************')
+    # print(list_Reward)
+    # mu_reward = np.mean(list_Reward, axis=0)
+    # std_reward = np.std(list_Reward, axis=0)
+    # print('Mean Reward',mu_reward)
+    # print('Std Reward',std_reward)
     #
     # time = np.arange(1, len(list_Reward[0]) + 1, 1.0)
     # plt.plot(time, mu_reward, color='green', label='Test Mean Reward')
@@ -298,28 +300,27 @@ if __name__ == '__main__':
     reward_list_training=[]
     number_of_training_episodes=parameter.how_many_times/parameter.save_each
     if(Train_Model):
-    	for i in range(1,parameter.how_many_times_training+1):
+        for i in range(1,parameter.how_many_times_training+1):
                 mean_scores=[]
                 print("Training Iteration {}, using {}".format(i,Feature))
                 agent.Train()
                 print('Mean Scores',mean_scores)
                 reward_list_training.append(mean_scores)
-    	print("Mean List Reward",reward_list_training)
-    	mu_reward_training = np.mean(reward_list_training, axis=0)
-    	std_reward_training = np.std(reward_list_training, axis=0)
-
-    	number_of_steps = len(reward_list_training[0])
-    	time = np.arange(1, number_of_steps + 1, 1.0)
-
-    	plt.plot(time, mu_reward_training, color='green')#, label='Reward')
-    	plt.fill_between(time, mu_reward_training - std_reward_training, mu_reward_training + std_reward_training, facecolor='blue', alpha=0.3)
-    	plt.legend(loc='upper right')
-    	plt.xlabel('Steps')
-    	plt.ylabel('Reward')
-    	plt.title(Feature)
-    	filename=model_path+'Training_'+Feature+'.png'
-    	plt.savefig(filename)
-    	plt.show()
+        print("Mean List Reward",reward_list_training)        # mu_reward_training = np.mean(reward_list_training, axis=0)
+        # std_reward_training = np.std(reward_list_training, axis=0)
+        #
+        # number_of_steps = len(reward_list_training[0])
+        # time = np.arange(1, number_of_steps + 1, 1.0)
+        #
+        # plt.plot(time, mu_reward_training, color='green')#, label='Reward')
+        # plt.fill_between(time, mu_reward_training - std_reward_training, mu_reward_training + std_reward_training, facecolor='blue', alpha=0.3)
+        # plt.legend(loc='upper right')
+        # plt.xlabel('Steps')
+        # plt.ylabel('Reward')
+        # plt.title(Feature)
+        # filename=model_path+'Training_'+Feature+'.png'
+        # plt.savefig(filename)
+        # plt.show()
 
 
     Test_Model(agent)
