@@ -2,7 +2,7 @@ class GlobalVariables_Multimodal:
 
     #parameters
     how_many_times_training=1
-    how_many_times = 600000
+    how_many_times = 16000
     replay_memory_size = 100000
     replay_memory_batch_size = 64
 
@@ -20,3 +20,4 @@ class GlobalVariables_Multimodal:
 
     save_each = 4000#0.00625 * how_many_times
 
+    final_test_percentage=[]

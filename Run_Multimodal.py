@@ -27,7 +27,7 @@ from playsound import playsound
 from pydub.playback import play
 import vizdoom as vzd
 
-from RL_ViZDoom_Abraham.GlobalVariables_Multimodal import GlobalVariables_Multimodal
+from GlobalVariables_Multimodal import GlobalVariables_Multimodal
 
 mean_scores=[]
 parameter=GlobalVariables_Multimodal
@@ -49,7 +49,7 @@ test_write_video = True
 Working_Directory = "./"
 scenario_file = Working_Directory + "find.wad"
 
-from RL_ViZDoom_Abraham.Environment_Multimodal import Environment_Multimodal
+from Environment_Multimodal import Environment_Multimodal
 
 
 
@@ -57,16 +57,11 @@ resolution = (30, 45) + (parameter.channels,)
 resolution_samples = (1,100) + (parameter.channels_audio,)
 Feature='Multimodal'
 
-# model_path = Working_Directory + "/Trained_Model_Paper/"+Feature+'_'+str(parameter.how_many_times)+"/"
-#
-# MakeDir(model_path)
-# model_name = model_path + "model"
-#
-
-model_path= Working_Directory+'Model_'+Feature+ '_'+ str(parameter.how_many_times) + '_Framerepeat_'+str(parameter.frame_repeat)
+model_path= Working_Directory+'Model_'+Feature+ '_'+ str(parameter.how_many_times) + '_Framerepeat_'+str(parameter.frame_repeat)+'/'
 
 MakeDir(model_path)
-DEFAULT_MODEL_SAVEFILE = model_path + '/model'
+model_name = model_path + "model"
+
 def Preprocess(img_pixel,img_audio):
      img_pixel = img_pixel[0].astype(np.float64) / 255.0
      img_pixel = skimage.transform.resize(img_pixel, resolution)
@@ -188,8 +183,8 @@ class Agent(object):
         #self.saver = tf.train.Saver(max_to_keep=1000)
         self.saver = tf.train.Saver()
         if (Load_Model):
-            print("Loading model from: ", DEFAULT_MODEL_SAVEFILE)
-            self.saver.restore(self.session, DEFAULT_MODEL_SAVEFILE)
+            print("Loading model from: ")#, DEFAULT_MODEL_SAVEFILE)
+            #self.saver.restore(self.session, DEFAULT_MODEL_SAVEFILE)
             #model_name_curr = model_name #+ "_{:04}".format(step_load)
             #print("Loading model from: ", model_name_curr)
             #self.saver.restore(self.session, model_name_curr)
@@ -212,8 +207,8 @@ class Agent(object):
             q[np.arange(q.shape[0]), a] = r + (1 - isterminal) * parameter.Discount_Factor * q2
             self.model.Learn(s1,s3,q)
 
-    def GetAction(self, state,state_audio):
-
+    def GetAction(self, state,state_audio,current_model_name):
+        self.saver.restore(self.session, current_model_name)
         if (random.random() <= 0.05):
             best_action = random.randint(0, self.num_actions-1)
         else:
@@ -256,13 +251,13 @@ class Agent(object):
                 train_scores.append(self.reward)
                 env.Reset()
             if (iteration % parameter.save_each == 0):
-                #model_name_curr = model_name #+ "_{:04}".format(int(iteration / save_each))
-                #self.saver.save(self.session, model_name_curr)
-                self.saver.save(self.session, DEFAULT_MODEL_SAVEFILE)
+                model_name_curr = model_name + "_{:04}".format(int(iteration / parameter.save_each))
+                self.saver.save(self.session, model_name_curr)
+                #self.saver.save(self.session, DEFAULT_MODEL_SAVEFILE)
                 Display_Training(iteration,parameter.how_many_times, train_scores)
                 train_scores = []
         env.Reset()
-def Test_Model(agent):
+def Test(agent,current_model_name):
     if (test_write_video):
         size = (640, 480)
         fps = 30.0  # / frame_repeat
@@ -277,7 +272,7 @@ def Test_Model(agent):
         reward_list=[]
         episode_list=[]
         reward_total = 0
-        number_of_episodes = 100
+        number_of_episodes = 4
         test=0
         while (test < number_of_episodes):
 
@@ -291,7 +286,7 @@ def Test_Model(agent):
 
             state_raw_pixel,state_raw_audio = env.Observation()
             state_pixel,state_audio = Preprocess(state_raw_pixel,state_raw_audio)
-            best_action=agent.GetAction(state_pixel,state_audio)
+            best_action=agent.GetAction(state_pixel,state_audio,current_model_name)
 
             for _ in range(parameter.frame_repeat):
 
@@ -313,17 +308,9 @@ def Test_Model(agent):
         list_Reward.append(reward_list)
         success=(reward_list.count(1.0)/number_of_episodes)*100
         success_percentate=str(success)+'%'
+        parameter.final_test_percentage.append(success)
         print('Success percentage',success_percentate)
-    #
-    # time = np.arange(1, len(list_Reward[0]) + 1, 1.0)
-    # plt.plot(time, mu_reward, color='green', label='Test Mean Reward')
-    # #plt.fill_between(time, mu_reward-std_reward, mu_reward+std_reward, facecolor='blue', alpha=0.3)
-    # plt.legend(loc='upper right')
-    # plt.xlabel('Number of Episodes')
-    # plt.ylabel('Mean Reward')
-    # file_name = model_path+"Test_"+Feature + '_' + str(how_many_times) + '_' + str(number_of_episodes) + '.png'
-    # plt.savefig(file_name)
-    # plt.show()
+
 
 if __name__ == '__main__':
 
@@ -333,32 +320,27 @@ if __name__ == '__main__':
 
     if (args.gpu):
         os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
+
     env = Environment_Multimodal(scenario_file)
     agent = Agent(env.NumActions())
-    reward_list_training=[]
-    number_of_training_episodes=parameter.how_many_times/parameter.save_each
-    if(Train_Model):
-        for i in range(1,parameter.how_many_times_training+1):
-                mean_scores=[]
-                print("Training Iteration {}, using {}".format(i,Feature))
-                agent.Train()
-                print('Mean Scores',mean_scores)
-                reward_list_training.append(mean_scores)
-        print("Mean List Reward",reward_list_training)
-        mu_reward_training = np.mean(reward_list_training, axis=0)
-        std_reward_training = np.std(reward_list_training, axis=0)
-        number_of_steps = len(reward_list_training[0])
-        time = np.arange(1, number_of_steps + 1, 1.0)
-        plt.plot(time, mu_reward_training, color='green')  # , label='Reward')
-        plt.fill_between(time, mu_reward_training - std_reward_training, mu_reward_training + std_reward_training,
-                         facecolor='blue', alpha=0.3)
-        plt.legend(loc='upper right')
-        plt.xlabel('Steps')
-        plt.ylabel('Reward')
-        plt.title(Feature)
-        filename = model_path + 'Training_' + Feature + '.png'
-        plt.savefig(filename)
-        plt.show()
+    reward_list_training = []
 
+    if (Train_Model):
+        for i in range(1, parameter.how_many_times_training + 1):
+            mean_scores = []
+            print("Training Iteration {}, using {}".format(i, Feature))
+            agent.Train()
+            print('Mean Scores', mean_scores)
+            reward_list_training.append(mean_scores)
+        print("Mean List Reward", reward_list_training)
 
-    Test_Model(agent)
+    if (Load_Model):
+        how_many_models_to_test = 2
+        for i in range(1, how_many_models_to_test + 1):
+            model_name_curr = model_name + "_{:04}".format(int(i))
+            print(model_name_curr)
+            Test(agent, model_name_curr)
+        print(parameter.final_test_percentage)
+        final_average_success = np.mean(parameter.final_test_percentage)
+        print('Average success percentage using the last {} models is {}%'.format(how_many_models_to_test,
+                                                                                  final_average_success))
