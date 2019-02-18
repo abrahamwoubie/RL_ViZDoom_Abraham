@@ -16,7 +16,7 @@ import matplotlib.ticker as ticker
 from matplotlib.ticker import MaxNLocator
 
 import skimage.color, skimage.transform
-
+import cv2
 from vizdoom import *
 np.set_printoptions(threshold=np.inf)
 
@@ -27,7 +27,7 @@ from playsound import playsound
 from pydub.playback import play
 import vizdoom as vzd
 
-from GlobalVariables_Multimodal import GlobalVariables_Multimodal
+from RL_ViZDoom_Abraham.GlobalVariables_Multimodal import GlobalVariables_Multimodal
 
 mean_scores=[]
 parameter=GlobalVariables_Multimodal
@@ -40,13 +40,16 @@ def MakeDir(path):
     except:
         pass
 
-Load_Model = False
-Train_Model = True
+Load_Model = True
+Train_Model = False
+
+test_display = True
+test_write_video = True
 
 Working_Directory = "./"
 scenario_file = Working_Directory + "find.wad"
 
-from Environment_Multimodal import Environment_Multimodal
+from RL_ViZDoom_Abraham.Environment_Multimodal import Environment_Multimodal
 
 
 
@@ -260,17 +263,21 @@ class Agent(object):
                 train_scores = []
         env.Reset()
 def Test_Model(agent):
-
+    if (test_write_video):
+        size = (640, 480)
+        fps = 30.0  # / frame_repeat
+        fourcc = cv2.VideoWriter_fourcc(*'XVID')  # cv2.cv.CV_FOURCC(*'XVID')
+        out_video = cv2.VideoWriter(Working_Directory + "test.avi", fourcc, fps, size)
     list_Episode = []
     list_Reward = []
-    how_many_times=5
+    how_many_times=1
 
     for i in range(1,how_many_times+1):
         print('Running Test',i)
         reward_list=[]
         episode_list=[]
         reward_total = 0
-        number_of_episodes = 50
+        number_of_episodes = 100
         test=0
         while (test < number_of_episodes):
 
@@ -287,6 +294,13 @@ def Test_Model(agent):
             best_action=agent.GetAction(state_pixel,state_audio)
 
             for _ in range(parameter.frame_repeat):
+
+                if (test_display):
+                    cv2.imshow("frame-test", state_raw_pixel)
+                    cv2.waitKey(20)
+
+                if (test_write_video):
+                    out_video.write(state_raw_pixel)
 
                 reward = env.Make_Action(best_action, 1)
                 reward_total += reward

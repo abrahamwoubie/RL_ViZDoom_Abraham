@@ -59,7 +59,7 @@ DEFAULT_MODEL_SAVEFILE = model_path + '/model'
 #model_name = model_path + "model"
 #
 def Preprocess(img):
-     img = img[0].astype(np.float32) / 255.0
+     img = img[0] / 255.0
      img = skimage.transform.resize(img, resolution)
      return img
 

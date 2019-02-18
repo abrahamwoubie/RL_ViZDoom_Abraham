@@ -14,7 +14,7 @@ target_position_y = 100
 
 Extract=Extract_Features
 
-class Environment_Multimodal(object):
+class Environment_Audio(object):
     prev_reward=None
     def __init__(self, scenario_path):
 
@@ -37,7 +37,7 @@ class Environment_Multimodal(object):
         
         self.game.set_episode_timeout(2100)
         self.game.set_episode_start_time(14)
-        self.game.set_window_visible(True)
+        self.game.set_window_visible(False)
         self.game.set_sound_enabled(False)
         self.game.set_living_reward(0)
         self.game.set_mode(Mode.PLAYER)
@@ -70,11 +70,9 @@ class Environment_Multimodal(object):
 
     def Observation(self):
         s = self.game.get_state()
-        player_position_x=s.game_variables[0]
-        player_position_y=s.game_variables[1]
-        samples= Extract.Extract_Samples(self,player_position_x,player_position_y)
-        pixel_data=(self.game.get_state().screen_buffer)
-        return pixel_data,samples
+        player_position_x = s.game_variables[0]
+        player_position_y = s.game_variables[1]
+        return (Extract.Extract_Samples(self, player_position_x, player_position_y))
 
     def MapActions(self, action_raw):
         return action_raw
